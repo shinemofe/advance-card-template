@@ -10,16 +10,16 @@ export function init (elementOrSelector, context) {
   }
 
   // 判断是否在小程序内
-  const isInNative = window.xm && window.xm.isInNative && window.xm.isInNative()
+  // const isInNative = window.xm && window.xm.isInNative && window.xm.isInNative()
 
   // 非小程序内，需要初始化卡片
-  if (isInNative) {
-    window.xm ? window.xm.sourceCheck({
-      componentNames: [Card.name]
-    }) : (console.warn('xm 不存在'))
-  } else {
-    return new Vue({
-      render: h => h(Card)
-    }).$mount(elementOrSelector)
-  }
+  // if (isInNative) {
+  //   window.xm ? window.xm.sourceCheck({
+  //     componentNames: [Card.name]
+  //   }) : (console.warn('xm 不存在'))
+  // } else {
+  return new Vue({
+    render: h => h(Card)
+  }).$mount(elementOrSelector)
+  // }
 }

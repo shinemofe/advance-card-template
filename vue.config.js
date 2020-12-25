@@ -1,4 +1,5 @@
 module.exports = {
+  productionSourceMap: false,
   configureWebpack: {
     externals: process.env.NODE_ENV === 'development' ? { vue: 'Vue' } : {}
   }

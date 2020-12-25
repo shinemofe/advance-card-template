@@ -25,6 +25,8 @@ const collectionCardDirs = fs.readdirSync(collectionDir).map(dir => {
   return dir
 })
 
+// http://10.0.17.202:3000/project/93/interface/api/2457
+
 /**
  * 生成 AppId
  * @param baseId 基准 ID
