@@ -8,6 +8,6 @@ if (/tv/.test(ua)) {
   Vue.component(Tv.name, Tv)
 } else if (/pc/.test(ua)) {
   Vue.component(Pc.name, Pc)
-} else if (/hwminiapp/.test(ua)) {
+} else {
   Vue.component(Mobile.name, Mobile)
 }
